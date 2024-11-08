@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Гравіті Фолз</title>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Lora" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="first">
+            <img src="images/logo.png" id="logo">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div> <!--сall a function when a button is clicked:-->
+            <div class="popup-menu" id="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                  </ul>
+            </div>
+        </div>
+
+        <div class="GF"><h1>Гравіті Фолз</h1></div>
+        
+        <div class="second">
+            <div class="plot">
+                <img src="images/main.jpg" id="main">
+                <p id="heading">Сюжет</p>
+                <p id="text">
+                    Батьки відправляють двійнят Діппера і Мейбл Пайнс на літо до дядька Стена, 
+                    власника дивної "Хижки Чудес" у містечку Гравіті Фолз. 
+                    Знайшовши загадковий щоденник, Діппер розуміє, що Гравіті Фолз не просте місце, 
+                    а приховує надприродних істот і загадкові явища. Двійнята навіть не уявляли, які відкриття і небезпеки на них чекають...
+                </p>
+                
+                <a href="#newMorePlot" id="links">Дізнатись більше →</a>
+            </div>
+
+            <div class="adventures">
+                <img src="images/bill.avif" id="smth">
+                <p id="heading">Таємниці та істина</p>
+                <p id="text">Білл Шифр стирає межі між реальністю і ілюзією, змушуючи героїв 
+                    і глядачів задуматись: що справжнє, а що — лише вигадка? Його здатність 
+                    маніпулювати розумом ставить питання про природу нашого сприйняття світу та те, 
+                    як легко ним можна маніпулювати. 
+                    Це піднімає питання: як відшукати істину в світі, де усе можна підробити?
+                </p>
+                <a href="#newMoreAdventures" id="links">Дізнатись більше →</a>
+            </div>
+
+            <div class="characters">
+                <img src="images/characters.jpg" id="adv">
+                <p id="heading">Ті, хто поруч у світі загадок</p>
+                <p id="text">У Гравіті Фолз двійнята Діппер і Мейбл не самі розгадують таємниці містечка. 
+                    Поруч із ними завжди є віддані союзники: хитрий, але турботливий дядько Стен, 
+                    смілива подруга Венді та добродушний помічник Зус. 
+                    Кожен із них додає щось особливе до їхніх пригод, 
+                    допомагаючи долати випробування</p>
+                <a href="#newMoreCharacters" id="links">Дізнатись більше →</a>
+            </div>
+        </div>
+
+        <div class="between"></div>
+        
+        <div class="footer">
+            © 2024 Гравіті Фолз. Усі права захищено. | Контакти: leramazchenko@gmail.com 
+        </div>
+
+        <script>
+            
+            function toggleMenu() {
+                const menu = document.getElementById('menu'); //збереження посилання на html елемент 'menu' 
+             
+                if (menu.style.display === 'none' || menu.style.display === '') { //=== - строга рівність
+                    menu.style.display = 'block';
+                } else {
+                    menu.style.display = 'none';
+                }
+            }
+    
+            document.addEventListener('click', function(event) { //обробник подій до елемента, анонімна функція коли відбудеться click
+                const menu = document.getElementById('menu');
+                const icon = document.querySelector('.menu-icon'); //повертає перший знайдений елемент
+                if (!menu.contains(event.target) && !icon.contains(event.target)) {
+                    menu.style.display = 'none';
+                }
+            });
+        </script>
+    </body>
+</html>
