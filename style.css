@@ -242,30 +242,23 @@ h1
         position: relative;
         flex-direction: column;
         height: 25vh;
-        margin-top: 10%;
+        margin-top: 15%;
         justify-content: flex-start;
         align-items: center;
     }
 
     .plot, .adventures, .characters
     {
-        height: 55vh;
+        height: auto;
         width: 70%;
         position: relative;
         object-fit: cover;
     }
-    .plot
-    {
-        margin-top: 5%;;
-    }
+   
     .between
     {
-        height: 130vh;
+        height: 190vh;
     }
    
-    .footer
-    {
-        bottom: 0;
-    }
 }
     
