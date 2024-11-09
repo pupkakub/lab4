@@ -59,40 +59,40 @@ body
 #menu:active {
     color: #ffd13a; }
 
-#links:active{
+a:active{
     color: #ffd13a; 
+}
+.GF
+{
+    height: 20vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
 }
 h1
 {
-    height: 15vh;
     font-size: 40px;
     text-align: center;
     font-family: 'Press Start 2P';
     margin: 20px 0 0 0;
     text-shadow: 10px 0 10px rgb(185, 81, 255);
     transition: font-size 0.3s ease;
-
-    display: flex;
-    position: relative;
-    bottom:0;
-    justify-content: center;
 }
 .second
 {
     background-color: #491d66;
     margin-top: 5%;
     display: flex;
-    position: relative;
+    position: absolute;
+    top: 30%;
     flex-direction: row;
     height: 25vh;
     color: black;
     flex-wrap: nowrap;
-    
     justify-content: center;
     box-sizing: border-box;
 
     transition: height 0.9s ease;
-
 }
 
 .plot, .adventures, .characters
@@ -133,45 +133,46 @@ h1
     box-sizing: border-box;
     object-fit: cover;
 }
-#links
+a
 {
+    cursor: pointer;
     color: rgb(171, 38, 184);
     font-weight: bold ;
     text-decoration: none; 
     transition: color 0.3s; 
     box-sizing: border-box;
-    object-fit: contain;
     padding-bottom: 5px;
 }
-#links:hover
+a:hover
 {
     color:rgb(255, 130, 207);
 }
 .plot
 {
-    transform: translateY(-35%);  
+    position: relative;
+    bottom: 90%;
 }
 .adventures
 {
-    transform: translateY(-20%);
+    position: relative;
+    bottom: 60%;
 }
 .characters
 {
-    transform: translateY(-5%);
-}
-.between
-{
-    height: 50%;
+    position: relative;
+    bottom: 30%;
 }
 .between
 {
     display: flex;
-    position: relative;
+    position: absolute;
+    height: 150vh;
 }
 .footer
 {
     display: flex;
-
+    position: absolute;
+    bottom: 0;
     color: white;
     width: 100%; 
     align-items: center;
@@ -210,18 +211,20 @@ h1
     {
         font-size: small;
     }
-    
     .plot
     {
-        transform: translateY(-25%);  
+        position: relative;
+        bottom: 70%;
     }
     .adventures
     {
-        transform: translateY(-5%);
+        position: relative;
+        bottom: 40%;
     }
     .characters
     {
-        transform: translateY(10%);
+        position: relative;
+        bottom: 10%;
     }
 }
 @media screen and (max-width: 720px)
@@ -230,7 +233,6 @@ h1
         display: flex;
         flex-direction: column;
         height: auto;
-        display: flex;
     }
     h1
     {
@@ -238,11 +240,9 @@ h1
     }
     .second
     {
-        display: flex;
-        position: relative;
         flex-direction: column;
         height: 25vh;
-        margin-top: 20%;
+        margin-top: 15%;
         justify-content: flex-start;
         align-items: center;
     }
@@ -254,11 +254,11 @@ h1
         position: relative;
         object-fit: cover;
     }
-   
-    .between
+    
+    .footer
     {
-        height: 190vh;
+       position: relative;
+       margin-top: 280%; 
     }
-   
 }
     
