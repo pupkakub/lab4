@@ -521,6 +521,9 @@ h1
     {
         height: 130vh;
     }
-   
+   .footer
+    {
+        bottom: 0;
+    }
 }
     
