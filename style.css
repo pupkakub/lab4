@@ -242,7 +242,7 @@ a:hover
     {
         flex-direction: column;
         height: 25vh;
-        margin-top: 15%;
+        margin-top: 20%;
         justify-content: flex-start;
         align-items: center;
     }
@@ -257,8 +257,8 @@ a:hover
     
     .footer
     {
-       position: relative;
-       margin-top: 280%; 
+       position: absolute;
+       top: 250%;
     }
 }
     
