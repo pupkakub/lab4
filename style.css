@@ -167,9 +167,7 @@ a:hover
 }
 .between
 {
-    display: flex;
-    position: relative;
-    height: 150vh;
+    margin-bottom: 10vh;
 }
 .footer
 {
@@ -214,40 +212,50 @@ a:hover
 }
 @media screen and (max-width: 720px)
 {
-    body{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-    h1
-    {
-        font-size: 35px; 
-        margin-top: 3px;
-    }
-    .second
-    {
-        flex-direction: column;
-        height: 25vh;
-        margin-top: 20%;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .plot, .adventures, .characters
-    {
-        height: auto;
-        width: 70%;
-        position: relative;
-        object-fit: cover;
-    }
-
-    .footer
-    {
-        display: flex;
-        text-align: center;
-        position: absolute;
-        justify-content: center;
-        top: 300%;
-    }
-}
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 190vh;
+        }
     
+        h1 {
+            font-size: 35px;
+            margin-top: 5%;
+        }
+    
+        .second {
+            flex-direction: column;
+            height: 25vh;
+            margin-top: 0;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .plot
+        {
+            margin-top: 25%;
+        }
+        .plot, .adventures, .characters {
+            height: 100vh;
+            width: 70%;
+            position: relative;
+        }
+        .characters
+        {
+            margin-bottom: 20%;
+        }
+    
+        .footer
+        {
+            display: flex;
+            text-align: center;
+            position: absolute;
+            justify-content: center;
+            bottom: -100%;
+        }
+    
+    }
+    
+
