@@ -123,10 +123,12 @@ a:active{
     -webkit-box-orient: vertical;
     overflow: auto; 
     margin-bottom: 10px;
+    overflow: auto;
 }
 #learnMore
 {
     font-size: 15px;
+    overflow: auto;
 }
 a
 {
@@ -178,7 +180,9 @@ a:hover
         padding: 10px;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
-        overflow: auto; 
+
+        overflow: auto;
+        
     }
     
 }
@@ -223,5 +227,6 @@ a:hover
         {
             margin-top: -3vh;
         }
+        
     }
     
