@@ -4,7 +4,7 @@ body
     height: 100vh;
     margin:0;
     display: grid;
-    grid-template-rows: 15vh 10vh 15vh 25vh 15vh 10vh 9vh;
+    grid-template-rows: 15vh 10vh 15vh 25vh 15vh 10vh 10vh;
     grid-template-columns: auto;
 }
 
@@ -38,7 +38,7 @@ body
     text-shadow: 10px 0 10px  rgb(161, 255, 208);
     text-decoration: none; 
     transition: color 0.3s; 
-    z-index: 1500;
+    z-index: 3000;
 }
 .popup-menu {
     display: none;
@@ -98,6 +98,8 @@ a:active{
     border-radius: 5px;
     box-shadow: 0 5px 15px 0 rgb(46, 43, 43);
     text-overflow: elipsis;
+
+    overflow: auto;
 }
 #heading
 {
@@ -121,14 +123,11 @@ a:active{
     padding: 2px;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
-    overflow: auto; 
     margin-bottom: 10px;
-    overflow: auto;
 }
 #learnMore
 {
     font-size: 15px;
-    overflow: auto;
 }
 a
 {
@@ -170,7 +169,7 @@ a:hover
     
     .plot, .adv, .char
     {
-        width: 25%;
+        width: 30vh;
     }
     #text, #learnMore
     {
@@ -179,10 +178,7 @@ a:hover
         margin-top: 3px;
         padding: 10px;
         text-overflow: ellipsis;
-        -webkit-box-orient: vertical;
-
-        overflow: auto;
-        
+        -webkit-box-orient: vertical;        
     }
     
 }
@@ -214,6 +210,8 @@ a:hover
         {
             width: 50%;
             max-width: 100%;
+
+
         }
         .plot
         {
