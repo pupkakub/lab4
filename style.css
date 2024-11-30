@@ -1,25 +1,24 @@
 body
 {
     background-color: #d097ff;
-    color: #000000;
-    font-family: 'Lora';
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+    height: 100vh;
+    margin:0;
+    display: grid;
+    grid-template-rows: 15vh 10vh 15vh 25vh 15vh 10vh 9vh;
+    grid-template-columns: auto;
 }
-.first {
+
+.first
+{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
     padding: 10px 5%;
 }
 
 #logo {
-    height: 100%; 
+    height: 70%; 
     padding: 15px 0 0 15%;
     transition: padding 0.9s ease;
 }
@@ -27,7 +26,7 @@ body
 {
     padding: 0 15% 0 15px;
     font-weight: bold ;
-    font-size: 25px;
+    font-size: 30px;
     text-shadow: 10px 0 10px rgb(185, 81, 255);
     cursor: pointer;
     transition: padding 0.9s ease;
@@ -60,56 +59,45 @@ body
 a:active{
     color: #ffd13a; 
 }
-.GF
+.header
 {
-    height: 20vh;
     display: flex;
     position: relative;
     justify-content: center;
-}
-h1
-{
-    font-size: 36px;
+    align-items: center;
+    font-size: 25px;
     text-align: center;
     font-family: 'Press Start 2P';
     margin:  0;
     text-shadow: 10px 0 10px rgb(185, 81, 255);
     transition: font-size 0.3s ease;
 }
-.second
+
+.line
 {
     background-color: #491d66;
-    margin-top: 5%;
     display: flex;
-    position: absolute;
-    top: 30%;
     flex-direction: row;
-    height: 25vh;
-    color: black;
-    flex-wrap: nowrap;
     justify-content: center;
-    box-sizing: border-box;
-    margin-top: 6%;
-    transition: height 0.9s ease;
+    gap: 50px;
+    flex-shrink: 0;
 }
 
-.plot, .adventures, .characters
+.plot, .adv, .char
 {
-    display: flex;
-    box-sizing: border-box;
-    object-fit: cover;
+    display: block;
+    background-color: rgb(132, 251, 255);
+    height: 45vh;
+    width: 18%;
+    max-width: 100%;
+    z-index: 2000;
     flex-wrap: wrap; 
-    flex-shrink: 1;
     background-color: aliceblue;
-    height: 55vh;
-    width: 20%;
-    margin: 20px;
     text-align: center;
-    justify-content:center ;
+    justify-content:center;
     border-radius: 5px;
     box-shadow: 0 5px 15px 0 rgb(46, 43, 43);
-
-    transition: transform 0.9s ease-in-out;
+    text-overflow: elipsis;
 }
 #heading
 {
@@ -128,22 +116,27 @@ h1
 }
 #text
 {
-    font-size: 10px;
-    margin-top: 0;
+    font-size: 15px;
+    margin-top: 10px;
     padding: 2px;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     overflow: auto; 
+    margin-bottom: 10px;
+}
+#learnMore
+{
+    font-size: 15px;
 }
 a
 {
+    max-width: 100%;
     cursor: pointer;
     color: rgb(171, 38, 184);
     font-weight: bold ;
     text-decoration: none; 
     transition: color 0.3s; 
     box-sizing: border-box;
-    font-size: smaller;
     padding-bottom: 5px;
 }
 a:hover
@@ -152,23 +145,13 @@ a:hover
 }
 .plot
 {
-    position: relative;
-    bottom: 95%;
-}   
-.adventures
-{
-    position: relative;
-    bottom: 70%;
+    margin-top: -13vh;
 }
-.characters
+.adv
 {
-    position: relative;
-    bottom: 45%;
+    margin-top: -6vh;
 }
-.between
-{
-    margin-bottom: 10vh;
-}
+
 .footer
 {
     display: flex;
@@ -177,85 +160,68 @@ a:hover
     background-color: black;
     color: white;
     font-size: 14px;
-    height: 7vh;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 
-@media screen and (max-width: 1400px)
-{
-    #logo {
-        padding: 15px 15px 0 5px;
-    }
-    .menu-icon
-    {
-        padding: 15px 5px 0 15px;
-    }
-    .first{
-        height: 6vh;
-    }
-    h1 {
-        font-size: 30px;
-    }
-    .plot, .adventures, .characters
+
+@media screen and (max-width: 1300px){
+    
+    .plot, .adv, .char
     {
         width: 25%;
-        margin: 15px;
     }
-    
-    #heading
+    #text, #learnMore
     {
-        font-size: 13px;
+        text-overflow: elipsis;
+        font-size: 12px;
+        margin-top: 3px;
+        padding: 10px;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        overflow: auto; 
     }
     
 }
+
 @media screen and (max-width: 720px)
 {
         body {
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            height: 190vh;
+            display: grid;
+            grid-template-rows: 15vh 10vh 10vh 25vh 60vh 60vh 9vh;
+            grid-template-columns: auto;
         }
-    
+        
+        .first
+        {
+            padding: 10px 0;
+        }
         h1 {
             font-size: 35px;
-            margin-top: 5%;
         }
     
-        .second {
+        .line{
             flex-direction: column;
-            height: 25vh;
-            margin-top: 0;
             justify-content: flex-start;
             align-items: center;
+            gap: 15vh;
+        }
+
+        .plot, .adv, .char
+        {
+            width: 50%;
+            max-width: 100%;
         }
         .plot
         {
-            margin-top: 25%;
+            margin-top: -5vh;
         }
-        .plot, .adventures, .characters {
-            height: 100vh;
-            width: 70%;
-            position: relative;
-        }
-        .characters
+        .adv
         {
-            margin-bottom: 20%;
+            margin-top: -4vh;
         }
-    
-        .footer
+        .char
         {
-            display: flex;
-            text-align: center;
-            position: absolute;
-            justify-content: center;
-            top: 300%;
+            margin-top: -3vh;
         }
-    
     }
     
-
