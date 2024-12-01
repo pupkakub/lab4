@@ -162,7 +162,7 @@ a:hover
     font-size: 14px;
     width: 100%;
 }
-@media screen and (max-height: 800px)
+@media screen and (max-height: 900px)
 {
     h1
     {
@@ -186,7 +186,8 @@ a:hover
         margin-top: 3px;
         padding: 10px;
         text-overflow: ellipsis;
-        -webkit-box-orient: vertical;        
+        -webkit-box-orient: vertical;  
+        overflow: auto;      
     }
 }
 
