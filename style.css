@@ -98,9 +98,8 @@ a:active{
     border-radius: 5px;
     box-shadow: 0 5px 15px 0 rgb(46, 43, 43);
     text-overflow: elipsis;
-
-    overflow: auto;
 }
+
 #heading
 {
     font-size: large;
@@ -163,10 +162,19 @@ a:hover
     font-size: 14px;
     width: 100%;
 }
-
+@media screen and (max-height: 800px)
+{
+    h1
+    {
+        font-size: 32px;
+    }
+    .plot, .adv, .char
+    {
+        overflow: auto;
+    }
+}
 
 @media screen and (max-width: 1300px){
-    
     .plot, .adv, .char
     {
         width: 30vh;
@@ -180,51 +188,45 @@ a:hover
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;        
     }
-    
 }
 
 @media screen and (max-width: 720px)
 {
         body {
             display: grid;
-            grid-template-rows: 15vh 10vh 10vh 25vh 60vh 60vh 9vh;
+            grid-template-rows: 15vh 15vh 15vh 25vh 80vh 80vh 10vh;
             grid-template-columns: auto;
         }
-        
         .first
         {
-            padding: 10px 0;
-        }
-        h1 {
-            font-size: 35px;
+            padding: 0;
         }
     
         .line{
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            gap: 15vh;
         }
 
         .plot, .adv, .char
         {
+            min-height: 55vh;
+            max-height: 60vh;
+            z-index: 4000;
             width: 50%;
-            max-width: 100%;
 
-
-        }
-        .plot
-        {
-            margin-top: -5vh;
-        }
-        .adv
-        {
-            margin-top: -4vh;
-        }
-        .char
-        {
-            margin-top: -3vh;
+            position: relative;
         }
         
-    }
+        .adv
+        {
+            top: 5vh;
+        }
+        
+        .char
+        {
+            top: 5vh;
+        }
+        
+}
     
