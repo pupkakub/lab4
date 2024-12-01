@@ -210,7 +210,7 @@ a:hover
 
         .plot, .adv, .char
         {
-            min-height: 55vh;
+            min-height: 45vh;
             max-height: 60vh;
             z-index: 4000;
             width: 50%;
